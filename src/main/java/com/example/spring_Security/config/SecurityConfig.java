@@ -27,7 +27,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated())
                 .formLogin((form) -> form
                         .loginPage("/login")
-                        .defaultSuccessUrl("/success", true)
+                        .defaultSuccessUrl("/success" )
                         .failureForwardUrl("/login?error=true")
                         .permitAll())
                 .logout(LogoutConfigurer::permitAll);
